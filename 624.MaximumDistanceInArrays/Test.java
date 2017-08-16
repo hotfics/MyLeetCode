@@ -1,4 +1,4 @@
-
+//注意题目要求:从"不同"的数组
 
 public  class Test {
 
