@@ -16,7 +16,6 @@ public class Main {
         for (int i=0;i<nums.length;i++){
             set.add(nums[i]);
         }
-        int[] count=new int[set.size()];
         for(int s:set){
             long n= Arrays.stream(nums).filter(x->x==s).count();
             if (n>nums.length/2) return s;
