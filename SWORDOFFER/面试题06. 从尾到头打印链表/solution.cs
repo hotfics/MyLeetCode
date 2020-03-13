@@ -14,8 +14,8 @@ namespace a
 		}
 		public int[] ReversePrint(ListNode head)
 		{
-			if (head == null) {
-				return new  int[]{ };
+		if (head == null) {
+			return new  int[]{};
 			}
 			var stack = new Stack<int>();
 				
@@ -26,8 +26,9 @@ namespace a
 			}
 			stack.Push(head.val);
 			
-			int[] result = new int[stack.Count];
-			for (int i = 0; i < stack.Count; i++) {
+            int size=stack.Count;
+			int[] result = new int[size];
+			for (int i = 0; i < size; i++) {
 				result[i] = stack.Pop();
 			}
 			return result;
