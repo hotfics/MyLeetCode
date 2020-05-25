@@ -12,7 +12,9 @@ namespace a
 		
 		public static void Main()
 		{	
-			string s = "pidbliassaqozokmtgahluruufwbjdtayuhbxwoicviygilgzduudzgligyviciowxbhuyatdjbwfuurulhagtmkozoqassailbdip";
+			string s = "abbada";
+
+
 			//Console.WriteLine(newString(s,3));
 			Console.WriteLine(ValidPalindrome(s));
 			//Console.WriteLine(IsValidPalindrome(s));
@@ -21,10 +23,7 @@ namespace a
 		}
 		public static bool ValidPalindrome(string s)
 		{
-			var b =	IsValidPalindrome(s);
-			if (b) {
-				return b;
-			}
+			
 			int len = s.Length;		
 			int j = len - 1;
 			for (int i = 0; i < len; i++) {
@@ -37,7 +36,7 @@ namespace a
 					break;
 				}
 			}
-			return false;
+			return true;
 		}
 		public static string newString(string s, int i)
 		{
