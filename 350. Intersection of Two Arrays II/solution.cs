@@ -19,6 +19,36 @@ namespace a
 			}
 			Console.ReadLine();
 		}
+			public static int[] intersect(int[] nums1, int[] nums2)
+		{
+			
+			var list = new List<int>();
+			var map1 = new Dictionary<int,int>();
+			var map2 = new Dictionary<int,int>();
+			foreach (var n in nums1) {
+				if (map1.ContainsKey(n)) {
+					map1[n]++;
+				} else {
+					map1.Add(n, 1);
+				}
+			}
+			foreach (var n in nums2) {
+				if (map2.ContainsKey(n)) {
+					map2[n]++;
+				} else {
+					map2.Add(n, 1);
+				}
+			}
+			var interKeys =	map1.Keys.Intersect(map2.Keys);
+			foreach (var i in interKeys) {
+				var count =	Math.Min(map1[i], map2[i]);
+				for (int j = 0; j < count; j++) {
+					list.Add(i);
+				}
+			}
+			
+			return list.ToArray();
+		}
 		public static int[] intersect(int[] nums1, int[] nums2)
 		{
 			IList<int> listR = new List<int>();
